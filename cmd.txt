@@ -1,0 +1,45 @@
+installing prisma
+
+step 1
+init node empty project using 
+                         npm init -y
+
+step 2 
+                        npm i typescript prisma ts-node @types/node --save-dev
+
+step 3
+init typescript project 
+                        npx tsc --init 
+
+step 4 
+change rootDir and outDir to ./scr and ./dist respectively
+
+step 5 
+initialise fresh project to prisma
+                        npx prisma init
+
+step 6 
+use proper db provider and give url
+
+step 7 
+create a model in schema.prisma folder
+
+step 8 
+run commond to perform migration 
+
+                        npx prisma migrate dev --name Initialise the schema ex [ npx prisma migrate dev --name UserAndTodoAdded ]
+
+step 9 after all cmd run commond to generate client for schema 
+
+                        npx prisma generate 
+
+
+
+
+
+
+
+
+
+
+
