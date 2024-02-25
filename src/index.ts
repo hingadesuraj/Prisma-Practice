@@ -54,3 +54,22 @@ async function updateUser(
 
 
 // updateUser('suraj@gmail.com',{firstName:"surajbhau",lastName:"hingadebhau"});
+
+// get User Details
+
+async function getUser(username : string) {
+    const res = await prisma.user.findFirst({
+        where : {email : username},
+        select: {
+            id:true,
+            email : true,
+            firstName:true,
+            lastName:true,
+            password:true
+        }
+    })
+    console.log(res);
+    
+}
+
+// getUser('suraj@gmail.com');
