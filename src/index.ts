@@ -10,8 +10,13 @@ async function insertUser(username:string,firstName:string,lastName:string,passw
             firstName,
             lastName,
             password
+        },
+        select:{
+            id:true,
+            email:true
         }
     })
     console.log(res)
 }
 
+insertUser('suraj@gmail.com','suraj','go','password');
