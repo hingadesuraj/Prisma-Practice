@@ -73,3 +73,27 @@ async function getUser(username : string) {
 }
 
 // getUser('suraj@gmail.com');
+
+interface Todo {
+    title :string,
+    done : boolean,
+    description:string
+}
+
+
+async function createTodo(title:string,done:boolean,description:string) {
+    const res = await prisma.todo.create({
+        data : {
+            title,done,description
+        },
+        select:{
+            id:true,
+            title:true,
+            done:true,
+            description:true
+        }
+    })
+    console.log(res)
+}
+
+createTodo('title',true,'description');
